@@ -7,3 +7,5 @@ def caesar_cipher(string, shift)
 		new_char = alphabet[new_index]
 	end.join
 end
+
+caesar_cipher("Hello, how have you been?", 3) # "Khoor, krz kdyh brx ehhq?"
