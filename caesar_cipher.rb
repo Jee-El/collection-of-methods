@@ -1,8 +1,9 @@
 def caesar_cipher(string, shift)
-	string.split('').map do |letter|
-		needed = {alphabet: (letter == letter.downcase) ? ('a'..'z').to_a : ('A'..'Z').to_a}
-		next letter unless needed[:new_index] = needed[:alphabet].index(letter)
-		needed[:new_index] += (needed[:new_index] + shift > 26) ? (shift - 26) : shift
-		letter = needed[:alphabet][needed[:new_index]]
+	string.split('').map do |char|
+		alphabet = (char == char.downcase ? 'a'..'z' : 'A'..'Z').to_a
+		next char unless new_index = alphabet.index(char)
+		new_index += shift
+		new_index %= 26
+		new_char = alphabet[new_index]
 	end.join
 end
