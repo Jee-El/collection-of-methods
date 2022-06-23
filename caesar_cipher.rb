@@ -8,4 +8,4 @@ def caesar_cipher(string, shift)
 	end.join
 end
 
-caesar_cipher("Hello, how have you been?", 3) # "Khoor, krz kdyh brx ehhq?"
+caesar_cipher("Hello, how have you been?", 3) # => "Khoor, krz kdyh brx ehhq?"
