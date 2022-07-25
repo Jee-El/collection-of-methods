@@ -1,13 +1,14 @@
 def bubble_sort(arr)
-  swaped = -1
-  until swaped == 0
-    swaped = 0
+  # swaped = -1
+  swapped = true
+  while swapped
+    swapped = false
     i = 0
     unsorted_length = arr.length
     while i + 1 < unsorted_length
       if arr[i] > arr[i + 1]
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
-        swaped = 1
+        swapped = true
       end
       i += 1
     end
@@ -16,4 +17,4 @@ def bubble_sort(arr)
   arr
 end
 
-bubble_sort([4, 3, 78, 2, 0, 2]) # => [0, 2, 2, 3, 4, 78]
+p bubble_sort([4, 3, 78, 2, 0, 2]) # => [0, 2, 2, 3, 4, 78]
