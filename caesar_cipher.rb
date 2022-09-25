@@ -1,6 +1,6 @@
 def caesar_cipher(string, shift)
   string.split('').map do |char|
-    alphabet = (char == char.downcase ? 'a'..'z' : 'A'..'Z').to_a
+    alphabet = *(char == char.downcase ? 'a'..'z' : 'A'..'Z')
     next char unless new_index = alphabet.index(char)
 
     new_index += shift
