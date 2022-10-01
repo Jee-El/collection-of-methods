@@ -1,14 +1,8 @@
-# basic-ruby-projects
+# collection-of-methods
 
-## Bubble Sort
+A collection of methods I wrote for fun & practice. I'll keep updating this repository with new ones as I write them.
 
-From wikipedia:
-
-> Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
-
-## Caesar Cipher
-
-Caesar cipher is a simple encryption technique that works by replacing each letter by a letter some fixed number of positions up the alphabet. So "A", with a shift of 3, would be replaced by "D".
+The majority of them are self-explanatory, so I will explain only the ones that aren't.
 
 ## Stocker Picker
 
