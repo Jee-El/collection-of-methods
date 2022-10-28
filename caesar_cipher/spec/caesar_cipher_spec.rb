@@ -3,7 +3,7 @@
 require_relative '../lib/caesar_cipher'
 
 describe '#caesar_cipher' do
-  context 'shifts a letter by a' do
+  context 'when a letter is shifted by a' do
     context 'positive integer (5)' do
       it 'returns "m" for "h"' do
         expect(caesar_cipher('h', 5)).to eq('m')
@@ -25,18 +25,18 @@ describe '#caesar_cipher' do
     end
   end
 
-  context 'rewinds back' do
-    it 'to the start of the alphabet' do
+  context 'when the shifted letter goes out of bounds' do
+    it 'rewinds to the start of the alphabet' do
       expect(caesar_cipher('z', 5)).to eq('e')
     end
 
-    it 'to the end of the alphabet' do
+    it 'rewinds to the end of the alphabet' do
       expect(caesar_cipher('e', -5)).to eq('z')
     end
   end
 
-  context 'doesn\'t affect special characters' do
-    it 'returns "%$#@^&*()-+= \|/" for "%$#@^&*()-+= \|/"' do
+  context 'when special characters are passed in' do
+    it 'it doesn\'t change them' do
       expect(caesar_cipher('%$#@^&*()-+= \|/', 10)).to eq('%$#@^&*()-+= \|/')
     end
   end
