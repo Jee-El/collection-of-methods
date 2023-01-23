@@ -1,9 +1,9 @@
 def bubble_sort(arr)
   swapped = true
+  unsorted_length = arr.length
   while swapped
     swapped = false
     i = 0
-    unsorted_length = arr.length
     while i + 1 < unsorted_length
       if arr[i] > arr[i + 1]
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
